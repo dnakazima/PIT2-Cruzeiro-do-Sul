@@ -1,14 +1,14 @@
 <?php
     include("conexao.php");
 
-    
+
     $NOME=$_POST['NOME'];
     $USERNAME=$_POST['USERNAME'];
     $PASSWORD=$_POST['PASSWORD'];
     $PASSWORD1=$_POST['PASSWORD1'];
-   
+
     if($PASSWORD == $PASSWORD1){
-   
+
 
     $sql="INSERT INTO users (USERID,NOME,USERNAME,PASSWORD)
         VALUES (NULL,'$NOME', '$USERNAME', SHA1('$PASSWORD'))";

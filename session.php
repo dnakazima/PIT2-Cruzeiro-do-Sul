@@ -25,7 +25,7 @@ if($row == 1) {
 	exit();
 } else {
 	$_SESSION['nao_autenticado'] = true;
-	header('Location: tela_login.php');
+	header('Location: index.html');
 	exit();
 }
 

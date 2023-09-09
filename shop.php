@@ -126,22 +126,23 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li class="active"><a href="./shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
+                    <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">Sobre</a></li>
+                            <li><a href="./shop.php">Compras</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="">Cadastra-se</a>
                                 <ul class="dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./wisslist.html">Wisslist</a></li>
-                                    <li><a href="./Class.html">Class</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                    <li><a href="pesquisar_usuario.html">Pesquisar usuario</a></li>
+                                    <li><a href="tela_login.php">Fazer login</a></li>
+                                    <li><a href="userLogin.html">Cadastrar</a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
+                                    <li><a href=""></a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./contact.html">Contato</a></li>
+                            <li><a href="logout.php">Logout/Sair</a></li>
                         </ul>
                     </nav>
                 </div>

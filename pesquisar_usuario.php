@@ -10,7 +10,7 @@
         echo "USERID: ".$rows_cliente['USERID']."<br>";
         echo "NOME: ".$rows_cliente['NOME']."<br>";
         echo "SENHA ".$rows_cliente['PASSWORD']."<br>";
-        echo "<br>";
-        echo "<a href='index.html'>Página inicial</a>";
+        echo "<br>";        
     }
+        echo "<a href='index.html'>Página inicial</a>";   
 ?>
