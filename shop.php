@@ -1,23 +1,23 @@
 <?php
-    session_start();
-    include('verifica_login.php');
+session_start();
+include('verifica_login.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Cake Template">
     <meta name="keywords" content="Cake, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/dario.js"></script>
     <title>Cake | Template</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -31,13 +31,13 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
-  
+
 </head>
 
 <body>
 
 
-        <!-- Page Preloder -->
+    <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -112,8 +112,10 @@
                                     <a href="#"><img src="img/icon/heart.png" alt=""></a>
                                 </div>
                                 <div class="header__top__right__cart">
+                                    <!--
                                     <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
                                     <div class="cart__price">Cart: <span>$0.00</span></div>
+                                    -->
                                 </div>
                             </div>
                         </div>
@@ -126,17 +128,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
-                    <ul>
+                        <ul>
                             <li class="active"><a href="./index.html">Home</a></li>
                             <li><a href="./about.html">Sobre</a></li>
                             <li><a href="./shop.php">Compras</a></li>
                             <li><a href="./blog.html">Blog</a></li>
                             <li><a href="">Cadastra-se</a>
                                 <ul class="dropdown">
-                                    <li><a href="pesquisar_usuario.html">Pesquisar usuario</a></li>
+                                    <li><a href="pesquisar_usuario.html">Pesquisar usuario/login</a></li>
+                                    <li><a href="userLogin.html">Cadastrar/Login</a></li>
                                     <li><a href="tela_login.php">Fazer login</a></li>
-                                    <li><a href="userLogin.html">Cadastrar</a></li>
-                                    <li><a href=""></a></li>
+                                    <li><a href="gerenciar.php">Gerenciar</a></li>
                                     <li><a href=""></a></li>
                                     <li><a href=""></a></li>
                                 </ul>
@@ -172,38 +174,8 @@
     <!-- Breadcrumb End -->
 
     <!-- Shop Section Begin -->
-    <section class="shop spad">
+    <section class="product spad">
         <div class="container">
-            <div class="shop__option">
-                <div class="row">
-                    <div class="col-lg-7 col-md-7">
-                        <div class="shop__option__search">
-                            <form action="#">
-                                <select>
-                                    <option value="">Categories</option>
-                                    <option value="">Red Velvet</option>
-                                    <option value="">Cup Cake</option>
-                                    <option value="">Biscuit</option>
-                                </select>
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-5">
-                        <div class="shop__option__right">
-                            <select>
-                                <option value="">Default sorting</option>
-                                <option value="">A to Z</option>
-                                <option value="">1 - 8</option>
-                                <option value="">Name</option>
-                            </select>
-                            <a href="#"><i class="fa fa-list"></i></a>
-                            <a href="#"><i class="fa fa-reorder"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
@@ -213,11 +185,19 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Dozen Cupcakes</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+
+
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                DÚZIA DE CUPCAKES <br> <strong>R$ 32,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd1">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('DÚZIA DE CUPCAKES', document.getElementById('qtd1').value, '32.00', 1)"> Comprar </button>
                             </div>
+                            <!-------------------------------------------------------------------->
+
+
+
                         </div>
                     </div>
                 </div>
@@ -229,11 +209,16 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Cookies and Cream</a></h6>
-                            <div class="product__item__price">$30.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                BISCOITOS E CREME <br> <strong>R$ 30,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd2">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('BISCOITOS E CREME', document.getElementById('qtd2').value, '30.00', 2)"> Comprar </button>
                             </div>
+                            <!-------------------------------------------------------------------->
+
                         </div>
                     </div>
                 </div>
@@ -245,11 +230,14 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                            <div class="product__item__price">$31.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                MINI DÚZIA SEM GLÚTEN <br> <strong>R$ 31,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd3">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('MINI DÚZIA SEM GLÚTEN', document.getElementById('qtd3').value, '30.00', 3)"> Comprar </button>
                             </div>
+                            <!-------------------------------------------------------------------->
                         </div>
                     </div>
                 </div>
@@ -261,11 +249,14 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Cookie Dough</a></h6>
-                            <div class="product__item__price">$25.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                MASSA DE BISCOITO <br> <strong>R$ 31,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd4">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('MASSA DE BISCOITO', document.getElementById('qtd4').value, '31.00', 4)"> Comprar </button>
                             </div>
+                            <!-------------------------------------------------------------------->
                         </div>
                     </div>
                 </div>
@@ -277,11 +268,14 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                            <div class="product__item__price">$05.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                CARAMELO SALGADO DE BAUNILHA <br> <strong>R$ 5,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd5">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('CARAMELO SALGADO DE BAUNILHA', document.getElementById('qtd5').value, '5.00', 5)"> Comprar </button>
                             </div>
+                            <!-------------------------------------------------------------------->
                         </div>
                     </div>
                 </div>
@@ -293,11 +287,14 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">German Chocolate</a></h6>
-                            <div class="product__item__price">$14.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                CHOCOLATE ALEMÃO <br> <strong>R$ 14,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd6">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('CHOCOLATE ALEMÃO', document.getElementById('qtd6').value, '14.00', 6)"> Comprar </button>
                             </div>
+                            <!-------------------------------------------------------------------->
                         </div>
                     </div>
                 </div>
@@ -309,11 +306,14 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Dulce De Leche</a></h6>
-                            <div class="product__item__price">$32.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                DOCE DE LEITE <br> <strong>R$ 32,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd7">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('DOCE DE LEITE', document.getElementById('qtd7').value, '32.00', 7)"> Comprar </button>
                             </div>
+                            <!-------------------------------------------------------------------->
                         </div>
                     </div>
                 </div>
@@ -325,97 +325,27 @@
                             </div>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">Mississippi Mud</a></h6>
-                            <div class="product__item__price">$08.00</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
+                            <h6><a href="#"></a></h6>
+                            <!-------------------------------------------------------------------->
+                            <div align="center">
+                                ESPECIAL DO MISSISSIPI<br> <strong>R$ 32,00</strong><br>
+                                qtd: <input type="number" value="0" min="1" max="10" id="qtd8">
+                                <button type="button" id="adicionar1" id="produto1" onclick="AddCarrinho('ESPECIAL DO MISSISSIPI', document.getElementById('qtd8').value, '32.00', 8)"> Comprar </button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-9.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">VEGAN/GLUTEN FREE</a></h6>
-                            <div class="product__item__price">$98.85</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-10.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET CELTICS</a></h6>
-                            <div class="product__item__price">$5.77</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-11.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">SWEET AUTUMN LEAVES</a></h6>
-                            <div class="product__item__price">$26.41</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-12.jpg">
-                            <div class="product__label">
-                                <span>Cupcake</span>
-                            </div>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">PALE YELLOW SWEET</a></h6>
-                            <div class="product__item__price">$22.47</div>
-                            <div class="cart_add">
-                                <a href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shop__last__option">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__pagination">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#"><span class="arrow_carrot-right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__last__text">
-                            <p>Showing 1-9 of 10 results</p>
+                            <!-------------------------------------------------------------------->
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <p align="center">
+            <a href="carrinho.html" style="color:#8ebdb6; font-size:x-large; border: 5px solid gray;padding:5px; " onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#0000FF'"> Ver Carrinho de compras </a>
+        </p>
+
+
+
     </section>
     <!-- Shop Section End -->
 
@@ -441,8 +371,7 @@
                         <p>A gratidão de quem recebe um benefício é bem menor que o prazer daquele de quem o faz.
                             Machado de Assis
 
-                            Disponível em: <https:
-                                //dicionariocriativo.com.br/citacoes/agradecimento/citacoes/gratid%C3%A3o>. Acesso em:
+                            Disponível em: <https: //dicionariocriativo.com.br/citacoes/agradecimento/citacoes/gratid%C3%A3o>. Acesso em:
                                 03/09/2023.</p>
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -471,9 +400,10 @@
                         <p class="copyright__text text-white">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
-                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This
+                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
